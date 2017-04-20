@@ -53,9 +53,21 @@
                   sound.x.push(date)
                   sound.y.push(Number(data[key].sound))
               })
-          Plotly.newPlot('weather', [temperature, humidity, temperatureC])
-          Plotly.newPlot('sound', [sound])
-          Plotly.newPlot('light', [light])
+          Plotly.newPlot(
+              'weather',
+              [temperature, humidity, temperatureC],
+              { title: 'Temperature and Humidity'}
+          )
+          Plotly.newPlot(
+              'sound',
+              [sound],
+              { title: 'Ambient Sound Levels' }
+          )
+          Plotly.newPlot(
+              'light',
+              [light],
+              { title: 'Ambient Light Levels' }
+          )
       }
     </script>
 </body>
