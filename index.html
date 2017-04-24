@@ -30,7 +30,7 @@
         messagingSenderId: "896200360003"
       };
       firebase.initializeApp(config);
-      firebase.database().ref('/tessel/environment').once('value').then(function (snapshot) {
+      firebase.database().ref('/environment/data').once('value').then(function (snapshot) {
           drawData(snapshot.val())
       })
       function drawData (data) {
