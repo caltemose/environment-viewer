@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 
 const NoMatch = () => (
     <main>
@@ -8,6 +8,7 @@ const NoMatch = () => (
             Thank you.
             <Link to="/">Come again!</Link>
         </p>
+        <Redirect to="/" />
     </main>
 )
 
