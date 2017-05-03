@@ -47,6 +47,7 @@ class Extremes extends Component {
                         }
                     }
                 })
+
             this.setState({
                 report: report
             })
@@ -72,6 +73,7 @@ class Extremes extends Component {
                         </li>
                     ))}
                 </ul>
+                <Plots traces={this.state.plots} title="Daily Highs/Lows" />
             </main>
         )
     }
