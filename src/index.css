@@ -8,8 +8,18 @@ main {
     margin: 1em;
 }
 
+article {
+    max-width: 42em;
+    /*margin: 0 auto;*/
+}
+
 a:hover, a:focus {
     text-decoration: none;
+    background-color: rgba(0, 0, 255, 0.1);
+}
+
+p {
+    line-height: 125%;
 }
 
 li {
