@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Header = () => (
-    <header>
+const Sitebar = ({ classes }) => (
+    <div className={classes}>
         <h1>Environment Viewer</h1>
 
         <nav>
@@ -10,7 +10,7 @@ const Header = () => (
             <Link to="/recent">Recent Data</Link>
             <Link to="/extremes">Extremes</Link>
         </nav>
-    </header>
+    </div>
 )
 
-export default Header
+export default Sitebar

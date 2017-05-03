@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Header from './global/Header'
+import Sitebar from './global/Sitebar'
 import NoMatch from './global/NoMatch'
 import Home from './Home'
 import Recent from './reports/Recent'
@@ -11,7 +11,7 @@ class App extends Component {
         return (
             <Router>
                 <div>
-                    <Header />
+                    <Sitebar classes="sitebar sitebar-top" />
 
                     <Switch>
                         <Route path="/" exact component={Home} />
@@ -20,7 +20,7 @@ class App extends Component {
                         <Route component={NoMatch} />
                     </Switch>
 
-                    <Header />
+                    <Sitebar classes="sitebar sitebar-bottom" />
                 </div>
             </Router>
         );

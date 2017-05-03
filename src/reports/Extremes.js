@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase'
 import moment from 'moment'
-// import Plot from './Plot'
+import Plots from './Plots'
 
 class Extremes extends Component {
     state = {
@@ -15,6 +15,7 @@ class Extremes extends Component {
             let currentDay
             let report = {}
             const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
             Object.keys(data)
                 .sort()
                 .forEach(function (key) {
@@ -48,8 +49,36 @@ class Extremes extends Component {
                     }
                 })
 
+            let highs = []
+            let lows = []
+            let days = []
+
+            Object.keys(report).forEach((key) => {
+                days.push(report[key].date)
+                highs.push(report[key].hi.temp)
+                lows.push(report[key].low.temp)
+            })
+
             this.setState({
-                report: report
+                report: report,
+                plots: [
+                    {
+                        x: [ ...days ],
+                        y: [ ...highs ],
+                        type: 'scatter',
+                        line: {
+                            color: 'rgb(200, 80, 80)'
+                        }
+                    },
+                    {
+                        x: [ ...days ],
+                        y: [ ...lows ],
+                        type: 'scatter',
+                        line: {
+                            color: 'rgb(20, 50, 200)'
+                        }
+                    }
+                ]
             })
         }.bind(this))
     }

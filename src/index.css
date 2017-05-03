@@ -12,35 +12,37 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
-header {
+li {
+    margin-bottom: 1em;
+}
+
+.sitebar {
     padding: 1em;
     background: rgb(230, 230, 230);
 }
 
-header h1 {
+.sitebar h1 {
     margin: 0 2em 0 0;
     padding-top: 0;
     font-size: 1em;
     display: inline-block;
 }
 
-header nav {
+.sitebar nav {
     display: inline-block;
     font-size: 0.9em;
 }
 
-header nav a {
+.sitebar nav a {
     display: inline-block;
     margin-right: 1em;
 }
 
-footer {
-    padding: 1em;
-    background: rgb(230, 230, 230);
-}
-
-li {
-    margin-bottom: 1em;
+.sitebar.sitebar-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .list-inline li {
