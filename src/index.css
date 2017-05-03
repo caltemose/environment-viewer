@@ -42,3 +42,8 @@ footer {
 li {
     margin-bottom: 1em;
 }
+
+.list-inline li {
+    display: inline-block;
+    width: 180px;
+}

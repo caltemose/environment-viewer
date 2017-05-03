@@ -63,7 +63,7 @@ class Extremes extends Component {
         return (
             <main>
                 <h2>Extremes</h2>
-                <ul>
+                <ul className="list-inline">
                     {days && days.map(key => (
                         <li key={key}>
                             Date: {report[key].date} ({report[key].day})<br />
