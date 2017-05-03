@@ -38,3 +38,7 @@ footer {
     padding: 1em;
     background: rgb(230, 230, 230);
 }
+
+li {
+    margin-bottom: 1em;
+}
